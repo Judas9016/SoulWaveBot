@@ -1,0 +1,19 @@
+
+/target
+.shuttle*
+Secrets*.toml
+
+# Archivos de compilación y dependencias de Rust
+/target/
+**/*.rs.bk
+
+# Archivos de configuración específicos del entorno
+.env
+config/*.toml
+
+# Archivos de editor y sistema
+.idea/
+.vscode/
+.DS_Store
+*.log
+*.bak
