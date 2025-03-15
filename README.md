@@ -16,12 +16,11 @@ Este es un **proyecto personal** en Rust utilizando Serenity. Actualmente, el bo
 1️⃣ **Clona el repositorio**  
 ```bash
 git clone 
-cd tu-bot-discord-rust
 
 2️⃣ Instala Rust y Cargo
 Si no tienes Rust instalado, descárgalo desde Rust Lang.
 
-3️⃣ Configura el archivo .secrests.toml (debes crearlo manualmente)
+3️⃣ Configura el archivo secrests.toml (debes crearlo manualmente)
 
 DISCORD_TOKEN=tu_token_aqui
 
