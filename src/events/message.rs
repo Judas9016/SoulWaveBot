@@ -12,6 +12,7 @@ pub async fn on_message(ctx: &Context, msg: &Message) {
     match content.as_str() {
         "!ping" => prefix::ping::run(ctx, msg).await,
         "!hello" => prefix::hello::hello(ctx, msg).await,
+        "!translate" => prefix::translate::run(ctx, msg).await,
         _ => {}
     }
 }

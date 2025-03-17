@@ -10,6 +10,7 @@ mod commands;
 mod events;
 
 
+
 /// Define la estructura del bot
 struct Bot;
 
@@ -18,8 +19,12 @@ impl EventHandler for Bot {
     /// Evento cuando el bot se conecta
     #[allow(unused_variables)]
     async fn ready(&self, ctx: Context, ready: Ready) {
-        events::ready::en_linea(ready).await;
+        events::ready::en_linea(&ctx, ready).await;
+        if let Err(e) = events::ready::registrar_comandos(&ctx).await {
+            eprintln!("✖️Error registering commands: {:?}", e);
+        }
     }
+
 
     /// Evento cuando recibe un mensaje
     async fn message(&self, ctx: Context, msg: Message) {
@@ -30,6 +35,8 @@ impl EventHandler for Bot {
     async fn interaction_create(&self, ctx: Context, interaction: Interaction) {
         events::interaction::handle_interaction(&ctx, interaction).await;
     }
+
+    
 }
 
 

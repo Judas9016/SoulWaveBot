@@ -1,2 +1,3 @@
 pub mod ping;
-pub mod hello; // Agrega otros comandos aquí
+pub mod hello; 
+pub mod translate;

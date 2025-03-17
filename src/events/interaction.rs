@@ -6,6 +6,7 @@ pub async fn handle_interaction(ctx: &Context, interaction: Interaction) {
         match command.data.name.as_str() {
             "ping" => slash::ping::run(ctx, command).await,
             "hello" => slash::hello::run(ctx, command).await,
+            "translate" => slash::translate::run(ctx, command).await,
             _ => println!("Comando no reconocido"),
         }
     }
